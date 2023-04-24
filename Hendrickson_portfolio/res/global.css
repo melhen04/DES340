@@ -1,0 +1,155 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*end of css reset*/
+
+/*global styles begin*/
+:root{
+  --bg:#fff;
+	--fg:#333;
+}
+
+body{font-family:'Avenir','Arial','Helvetica','Roboto',sans-serif;
+font-size:clamp(10px,1vw,14px); background:var(--bg); color:var(--fg);
+}
+div{box-sizing:border-box;}
+
+
+
+
+/*typography*/
+div.rtf{}
+	div.rtf p{font-size:1em; line-height:1.5em; margin-bottom:.8em; margin-top:1em;}
+	div.rtf h1{font-family:'Bebas Neue'; font-size:4.5em; line-height:1em; margin-bottom:0em; margin-top:.5em; color: white;text-align:center;}
+	div.rtf h2{font-family:'Bebas Neue'; font-size:2em; line-height:1em; margin-bottom:1em; margin-top:.1em; color: white;text-align:center;}
+	div.rtf h3{font-size:2em; letter-spacing: 1.5px; line-height:2em; margin-bottom:.5em; margin-top:1em;color:green;font-family:'Bebas Neue';text-align:center;}
+	div.rtf h4{font-family:'Avenir';font-size:1.2em; line-height:2em; margin-bottom:.5em; margin-top:1em;text-align:center;}
+	div.rtf h5{font-size:.8em; line-height: 1.5em; margin-bottom: 2em; margin-top:.5em;text-align:center;}
+
+a:link{text-decoration:none; color:#333;}
+a:visited{text-decoration:none;color:#333;}
+a:hover{text-decoration:underline;color:#00ca00;}
+/*global styles begin*/
+
+html{scroll-behavior: smooth;}
+
+
+
+/*header styles*/
+header{position:fixed; top:0; left:0; right:0; display:grid;
+	grid-template-columns: 60px 1fr 1fr; grid-gap:20px; background:#333; color:#fff;
+	z-index:10000;
+}
+header img{width:30px; margin:1em; align-self:center; justify-self:end;}
+header p{font-size:1.4em; align-self:center; justify-self:start;}
+header a.mail{text-decoration:none; align-self:center; justify-self:end; color:#fff;
+	margin:0 20px;font-size:1.4em;
+}
+
+
+div.xframe{padding-top:6em; min-height:100vh; background-size:30px;}
+
+div.hero{min-height:55vh; position: relative; }
+img.hero-img{width:100%; height:60vh;; object-fit:cover;}
+div.hero-txt{position: absolute;
+	top:50%; left:50%; transform:translate(-50%,-50%);
+	background-color:rgba(0,0,0,0.5);
+  padding:2em; font-size:2em;
+}
+div.hero-txt h2{margin-top:0;}
+
+div.text_image{
+	--padding:4vw;
+}
+
+div.text_image{max-width:1200px; min-height:80vh; margin:0 auto; display:grid; grid-template-columns: 1fr 1fr; grid-gap:var(--padding); padding:var(--padding);
+}
+div.text_image img{width:100%; max-height:80vh; object-fit:contain; margin-bottom: 1em;}
+div.text_image div.txt{justify-self:center; align-self:start; max-width:65ch;}
+
+@media screen and (orientation: portrait) {
+  div.text_image{grid-template-columns: 1fr;}
+	div.text_image div.txt{justify-self:start; grid-row-start:1;}
+	div.text_image div.rtf{max-width: none;}
+  body{font-size:clamp(14px,3vw,24px);}
+	div.rtf p{font-size:0.6em;}
+}
+
+div.cards{max-width:1200px; margin:0 auto;;
+	display:grid; grid-template-columns: repeat(auto-fill,minmax(250px,1fr)); grid-gap:4vw; padding:4vw;font-size:1.3em;
+}
+
+div.cards div.card{}
+div.cards div.card img{width:100%;}
+div.cards div.card div.txt{text-align:center; padding:1vw 2vw; font-family: ; font-size: 1em;}
+
+
+
+
+.hover{transition:all 0.5s;}
+.hover:hover{transform:scale(1.02);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
